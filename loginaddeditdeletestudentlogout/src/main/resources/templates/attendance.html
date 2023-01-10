@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>index page</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  Brand
+  <a class="navbar-brand" href="#">Student Management System</a>
+
+  Toggler/collapsibe Button
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  Navbar links
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/viewstudent}">Student Management</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+		<form th:action="@{/logout}" method="post">
+			<p>
+				
+			</p>
+			
+			<input type="submit" value="Sign Out" />
+		</form>
+	</div>
+</nav>
+<br>
+
+	<div class="container text-center">
+	
+<div>
+		<h1>List of Students</h1>
+	</div>
+<div>
+<form th:action="@{/radio}" th:object = "${students}" method="POST">
+		<table class="table table-striped table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th>User ID</th>
+					<th>E-mail</th>
+					<th>Name</th>
+					<th>Class</th>
+					
+					
+					<th>Attendance</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+			
+				<tr th:each="students: ${liststudents}">
+					<td th:text="${students.id}"></td>
+					<td th:text="${students.email}"></td>
+					<td th:text="${students.name}"></td>
+					<td th:text="${students.class_}"></td>
+					<td ><input type="checkbox" name="present" value="present">present
+					<input type="checkbox" name="absent" value="absent">absent</td>
+					
+					
+				</tr>
+			</tbody>
+			
+		</table>
+		<input type="submit" value="done">
+		</form>
+	</div>
+</div> 
+	
+</body>
+</html> -->
